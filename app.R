@@ -377,7 +377,7 @@ server <- function(input, output, session) {
           SS = colSums(xxz^2, na.rm = T)
           
           # trace(K2) 
-          trK2 = sum(SS)/(Chr_Mark_Matr[i,i]^2*B*as.numeric(sc))
+          trK2 = sum(SS)/(Chr_Mark_Matr[i,i]^2)/B/as.numeric(sc)
           Chr_Me_Matr[i,i] <- nn^2/(trK2-nn) # me
           Chr_Lb_Var_Matr[i,i] <- (2/B)*(nn+(3*nn^3-3*nn^2+2*nn)/((nn-1)^3)+6*nn^2/Chr_Me_Matr[i,i]+(4*nn^2+4*nn)/(Chr_Me_Matr[i,i]*(nn-1))+(2*nn^3+2*nn^2-nn)/(Chr_Me_Matr[i,i]^2))
         }
@@ -407,7 +407,7 @@ server <- function(input, output, session) {
                 xxz2 = as.matrix(xxz2[,3]*xxz2[,c(5:ncol(xxz2))])
                 xxz1_2 = xxz1 + xxz2
                 SS = colSums(xxz1_2^2, na.rm = T)
-                trK2 = sum(SS)/(Chr_Mark_Matr[i,j]^2*B*as.numeric(sc))
+                trK2 = sum(SS)/(Chr_Mark_Matr[i,j]^2)/B/as.numeric(sc)
                 Chr_Me_Matr[i,j] <- nn^2/(trK2-nn) # me
                 Chr_Lb_Var_Matr[i,j] <- (2/B)*(nn+(3*nn^3-3*nn^2+2*nn)/((nn-1)^3)+6*nn^2/Chr_Me_Matr[i,j]+(4*nn^2+4*nn)/(Chr_Me_Matr[i,j]*(nn-1))+(2*nn^3+2*nn^2-nn)/(Chr_Me_Matr[i,j]^2))
               }
