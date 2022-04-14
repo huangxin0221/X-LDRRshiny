@@ -271,13 +271,13 @@ server <- function(input, output, session) {
       system(QC1)
       
       if (as.numeric(input$proportion)==1){
-        QC2 = paste0(plink2, " --bfile ", froot, ".1.autosome.snp --chr-set ", input$autosome, " --maf ", input$maf_cut, " --geno ", input$geno_cut, " --make-bed --out ", froot,".3.core")
+        QC2 = paste0(plink2, " --bfile ", froot, ".1.autosome.snp --rm-dup force-first --chr-set ", input$autosome, " --maf ", input$maf_cut, " --geno ", input$geno_cut, " --make-bed --out ", froot,".3.core")
         cat("\nQC...\nMAF and missing rate...\n\n")
         system(QC2)
         cat("\nQC...\nFinished...\n\n")
         frootCore = paste0(froot,".3.core")
       }else{
-        QC2 = paste0(plink2, " --bfile ", froot, ".1.autosome.snp --chr-set ", input$autosome, " --maf ", input$maf_cut, " --geno ", input$geno_cut, " --make-bed --out ", froot,".2.maf.geno")
+        QC2 = paste0(plink2, " --bfile ", froot, ".1.autosome.snp --rm-dup force-first --chr-set ", input$autosome, " --maf ", input$maf_cut, " --geno ", input$geno_cut, " --make-bed --out ", froot,".2.maf.geno")
         cat("\nQC...\nMAF and missing rate...\n\n")
         system(QC2)
         #mm=as.numeric(strsplit(system(paste0("wc -l ", froot, ".2.maf.geno.bim"),intern=T)," ")[[1]][1])
