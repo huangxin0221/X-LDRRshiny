@@ -1,16 +1,16 @@
 So far, it supports Mac and Linux only.
-# X-LD-Plus Shiny
-The core algorithm of X-LD-Plus is implemented in C and C++ and combined with Rshiny to build interactive web apps straight from R.
-You can easily deploy X-LD-Plus directly at you PC/sever by running the following commands in RStudio/R.
+# X-LDR Shiny
+The core algorithm of X-LDR is implemented in C and C++ and combined with Rshiny to build interactive web apps straight from R.
+You can easily deploy X-LDR directly at you PC/sever by running the following commands in RStudio/R.
 ## Quick Start Guide
-### Run the commands below to initialize X-LD Shiny.
+### Run the commands below to initialize X-LDR Shiny.
 ~~~
 # This is an R console
 # 1. First, make sure the following R packages are installed before running
 install.packages(c("shiny","bsplus","ggplot2","reshape2","zip","data.table"))
 # 2. Then, you can run it directly at you RStudio, if you have shiny package installed.
 library(shiny)
-runGitHub("X-LD-PlusRshiny", "huangxin0221")
+runGitHub("X-LDRRshiny", "huangxin0221")
 ~~~
 ### Other ways to initialize X-LD Shiny.
 Normally for most of the users working with **MacOS/Unbuntu etc.**, there should be a window or browser tab pops up, X-LD is then ready for the analysis.
@@ -20,7 +20,7 @@ Find the download link at the homepage Code button, download the zipped source c
 # 2. Unzip the soucrce codes locally
 # 3. Open R/Rstudio and run the commands below to initialize X-LD Shiny.
 # For Windows users, please run R studio as an administrator.
-setwd("/home/your_name/X-LD-PlusRshiny-main/")
+setwd("/home/your_name/X-LDRRshiny-main/")
 library(shiny)
 runApp()
 ~~~
