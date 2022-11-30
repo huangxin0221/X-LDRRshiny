@@ -59,7 +59,7 @@ http://100.100.100.1:1234
 ### Some possible errors and their solutions 
 ~~~
 Error in utils::download.file(url, method = method, ...) : 
-  cannot open URL 'https://github.com/huangxin0221/X-LD-PlusRshiny/archive/master.tar.gz' # Do not use runGitHub function to initialize X-LD Shiny
+  cannot open URL 'https://github.com/huangxin0221/X-LDRRshiny/archive/master.tar.gz' # Do not use runGitHub function to initialize X-LD Shiny
 # For Windows users
  
 # For Mac users
